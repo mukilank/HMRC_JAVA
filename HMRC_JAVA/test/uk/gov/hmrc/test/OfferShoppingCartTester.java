@@ -66,5 +66,12 @@ public class OfferShoppingCartTester extends BaseTester{
 		assertEquals(new BigDecimal(1.70).doubleValue(), calculatedTotal.doubleValue());
 	}
 	
+	@Test
+	public void test1Apples5Orange() {
+		List<Fruit> basket = getBasket(1,5);
+		BigDecimal calculatedTotal = cart.calculateTotal(basket);
+		assertEquals(new BigDecimal(1.60).doubleValue(), calculatedTotal.doubleValue());
+	}
+	
 }
 
